@@ -1,6 +1,5 @@
 generator client {
   provider = "prisma-client-js"
-  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -12,8 +11,4 @@ model todos {
   id    Int      @id @default(autoincrement())
   title String?  @db.VarChar(255)
   done  Boolean? @default(false)
-}
-
-model listName {
-  name String @id(map: "SequelizeMeta_pkey") @db.VarChar(255)
 }
